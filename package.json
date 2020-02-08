@@ -1,0 +1,70 @@
+{
+  "name": "ts-cli-boilerplate",
+  "description": "Boilerplate for simple TypeScript command-line tools",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "email": "zac@zacanger.com",
+    "name": "Zac Anger",
+    "url": "https://zacanger.com"
+  },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/zacanger"
+  },
+  "license": "LGPL-3.0",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "bin": "./index.js",
+  "scripts": {
+    "build": "tsc",
+    "prebuild": "npm t",
+    "preversion": "npm run build",
+    "test": "run-s -s test:ts test:lint",
+    "test:lint": "eslint --ext .ts -c .eslintrc.json src/*.ts",
+    "test:ts": "tsc --noEmit"
+  },
+  "homepage": "https://github.com/zacanger/ts-cli-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/ts-cli-boilerplate.git"
+  },
+  "bugs": "https://github.com/zacanger/ts-cli-boilerplate/issues",
+  "keywords": [
+    "boilerplate",
+    "cli",
+    "ts",
+    "typescript"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "13.7.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-zacanger": "1.0.2",
+    "husky": "4.2.1",
+    "lint-staged": "10.0.7",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "sortpack": "2.1.1",
+    "typescript": "3.7.5"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "sortpack"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
