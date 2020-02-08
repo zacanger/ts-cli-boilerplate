@@ -8,8 +8,8 @@
   },
   "extends": [
     "plugin:zacanger/recommended",
-    "plugin:zacanger/typescript",
     "plugin:zacanger/node",
+    "plugin:zacanger/typescript",
     "plugin:zacanger/prettier-ts"
   ],
   "parser": "@typescript-eslint/parser",
