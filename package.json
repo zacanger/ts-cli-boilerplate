@@ -41,7 +41,9 @@
     "ts",
     "typescript"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "zeelib": "11.0.9"
+  },
   "devDependencies": {
     "@types/node": "13.7.0",
     "@types/tape": "4.2.34",
