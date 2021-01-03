@@ -1,7 +1,7 @@
 {
   "name": "ts-cli-boilerplate",
   "description": "Boilerplate for simple TypeScript command-line tools",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": true,
   "author": {
     "email": "zac@zacanger.com",
@@ -18,7 +18,9 @@
     "index.js",
     "lib"
   ],
-  "bin": "./index.js",
+  "bin": {
+    "ts-cli-boilerplate": "index.js"
+  },
   "scripts": {
     "build": "tsc",
     "prebuild": "npm t",
